@@ -31,20 +31,32 @@ body {
     margin-bottom: 10px;
 }
 
-#rollButton {
-    background-color: #f90f0f;
+.btn {
+    
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
-    margin-top: 10px;
+    margin: 10px;
     cursor: pointer;
     transition: background-color 0.4s;
 }
 
+#rollButton {
+    background-color: #f90f0f;
+}
+
 #rollButton:hover {
     background-color: #4c0101;
+}
+
+#resetButton {
+    background-color:#4c0101;
+}
+
+#resetButton:hover {
+    background-color: #f90f0f;
 }
 
 #dice1,

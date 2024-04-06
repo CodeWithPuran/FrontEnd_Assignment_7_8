@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
             showResultMessage();
             disableRollButton();
         } 
-        if (player1Score == player2Score){
+        if (player1Score == winningScore && player2Score == winningScore){
             document.getElementById("resultMessage").innerText = "It's a Tie! Play again";
             showResultMessage();
         }
@@ -55,4 +55,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Event listener for the roll button
     document.getElementById("rollButton").addEventListener("click", rollDice);
+
+    // Event listener for the reset button
+    document.getElementById("resetButton").addEventListener("click", resetGame);
+
+    // Function to reset the game
+    function resetGame() {
+        player1Score = 0;
+        player2Score = 0;
+        document.getElementById("player1Score").innerText = "Player 1 - Score: 0";
+        document.getElementById("player2Score").innerText = "Player 2 - Score: 0";
+        document.getElementById("resultMessage").style.display = "none";
+        document.getElementById("rollButton").disabled = false;
+    }
 });
